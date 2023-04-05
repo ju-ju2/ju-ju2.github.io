@@ -23,7 +23,7 @@ copyright: Copyright © 2023
 
 baseurl: "" # the subpath of your site, e.g. /blog
 url: https://ju-ju2.github.io # the base hostname & protocol for your site, e.g. http://example.com
-favicon: "🔥" # the favicon for your site
+favicon: "/assets/images/favicons/favicon-juju.ico" # the favicon for your site
 
 yat:
   date_format: "%Y-%m-%d"
@@ -54,7 +54,7 @@ header_pages:
 defaults:
   home:
     banner:
-      image: /assets/images/banners/home-juj-u2.png
+      image: /assets/images/banners/juju2-banner.png
       opacity: 1
       background: "#000"
       height: "100vh"
