@@ -14,17 +14,18 @@
 # You can create any custom variable you would like, and they will be accessible
 # in the templates via {{ site.myvariable }}.
 
+local: "ko-KR"
 title: ENJOY DEV.
 email: hjy2859@naver.com
 github: https://github.com/ju-ju2
 
 author: ju-ju2
-copyright: Copyright © 2023
+copyright: Copyright 2023. ju-ju2 all rights reserved.
 
 baseurl: "" # the subpath of your site, e.g. /blog
 url: https://ju-ju2.github.io # the base hostname & protocol for your site, e.g. http://example.com
 favicon: "/assets/images/favicons/favicon-juju.ico" # the favicon for your site
-
+logo: "/assets/images/favicons/favicon-juju.ico"
 yat:
   date_format: "%Y-%m-%d"
 
@@ -40,8 +41,6 @@ og:image: "/assets/images/banners/juju-og-image.png"
 # If you want to generate website sitemap, you can set true
 # sitemap: false
 
-lang: ko
-
 night_mode: "manual"
 
 header_pages:
@@ -51,21 +50,23 @@ header_pages:
   - categories.html
   - tags.html
 
-defaults:
-  home:
-    banner:
-      image: /assets/images/banners/juju2-banner.png
-      opacity: 1
-      background: "#000"
-      height: "100vh"
-      min_height: "38vh"
+# defaults:
+#   home:
+#     banner:
+#       image: /assets/images/banners/juju2-banner.png
+#       opacity: 1
+#       background: "#000"
+#       height: "100vh"
+#       min_height: "38vh"
 
 # Pagination setting
 paginate: 5
 
 # Disqus comments
+comments:
+  provider: "disqus"
 disqus:
-  shortname: "ju-ju2-github-io"
+  shortname: "ju-ju2GitBlog"
 
 # Gitment comments
 # gitment:
