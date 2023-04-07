@@ -88,3 +88,5 @@ plugins:
   - jekyll-sitemap
   - jekyll-paginate
   - jekyll-spaceship
+
+  naver_site_verification: "da06869244094d84a44e4eb3f34f99b5bc77707a"
