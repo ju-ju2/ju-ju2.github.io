@@ -63,10 +63,10 @@ header_pages:
 paginate: 5
 
 # Disqus comments
-comments:
-  provider: "disqus"
-disqus:
-  shortname: "ju-ju2GitBlog"
+# comments:
+#   provider: "disqus"
+# disqus:
+#   shortname: "ju-ju2GitBlog"
 
 # Gitment comments
 # gitment:

@@ -27,7 +27,8 @@ figure {
 body {
   font-family: $base-font-family;
   font-weight: $base-font-weight;
-  font-size: #{$base-font-size};
+  // font-size: #{$base-font-size};
+  font-size: $base-font-size;
   font-display: swap;
   line-height: #{$base-line-height};
   color: $text-color;
