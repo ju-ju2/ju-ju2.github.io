@@ -4,7 +4,6 @@ title: 깃허브 블로그에 댓글창 만들기 with utterances
 subtitle: utterances 쓸까, disqus쓸까 고민이라면 utterances 쓰세요
 categories: github
 tags: [blog, github, disqus, utterances]
-og:image: "/assets/images/banners/juju-og-image.png"
 ---
 
 <p style="font-size = 16px">
