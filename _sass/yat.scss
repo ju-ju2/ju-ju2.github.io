@@ -60,3 +60,7 @@ $on-laptop: 800px !default;
 @import "yat/base", "yat/layout", "yat/dark", "misc/theme-toggle",
   "misc/article-menu", "misc/common-list", "misc/google-translate",
   "misc/gitment", "misc/click-to-top";
+
+.utterances {
+  max-width: 100% !important;
+}
