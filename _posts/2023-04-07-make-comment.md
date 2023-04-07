@@ -37,6 +37,9 @@ repo란에는 깃허브 username과 연동하는 repository의 이름을 적어�
 
 ![configuration repo](/assets/images/../../../assets/images/2023-04-07-make-comment/utterances/3.png "configuration repo")
 
+<br />
+<br />
+<br />
 **3-2. Issue Mapping**
 <br />
 댓글이 달리면 이슈에 어떻게 보여줄건지 선택한다.
@@ -52,6 +55,9 @@ repo란에는 깃허브 username과 연동하는 repository의 이름을 적어�
 
 ![configuration Issue](/assets/images/../../../assets/images/2023-04-07-make-comment/utterances/4.png "configuration Issue")
 
+<br />
+<br />
+<br />
 ### _4. script 설정하기_
 
 위의 설정을 마쳤으면 스크립트가 짠!하고 나온다. 이걸 복사해서 파일에 설정해주면 된다.
@@ -61,15 +67,22 @@ repo란에는 깃허브 username과 연동하는 repository의 이름을 적어�
 
 ### _5. 결과_
 
-#### _5-1. 1차 결과_
+**5-1. 1차 결과**
 
 자 이제 저장하고 깃허브에 푸시하면!!!!!! 짜자잔!😆
+<br />
 
 ![test](/assets/images/../../../assets/images/2023-04-07-make-comment/utterances/6.png "tset")
 
-#### _5-2. 레이아웃 수정(옵션)_
+_....어라?_ 근데 뭐가 좀 이상하다. 비율이 아주 맘에 안든다..이런거 용납 못한다.
+<br />
+<br />
+<br />
+<br />
 
-....어라? 근데 뭐가 좀 이상하다. 비율이 아주 맘에 안든다..이런거 용납 못한다.<br />
+**5-2. 레이아웃 수정(옵션)**
+
+<br />
 찾아보니 css로 설정할 수 있었다.
 
 ```css
@@ -78,7 +91,10 @@ repo란에는 깃허브 username과 연동하는 repository의 이름을 적어�
 }
 ```
 
+<br />
+
 요거를 적용해주면 되는데 나같은 경우엔 /\_sass/yat.scss 에 추가했다. 사용자마다 사용하는 테마가 달라 다른 위치에 저장될 수 도 있다.
+<br />
 
 이제 다시 푸시해보면!!!!!
 <br />
@@ -89,9 +105,10 @@ repo란에는 깃허브 username과 연동하는 repository의 이름을 적어�
 <br />
 <br />
 
-#### _5-3. 최종결과_
+**5-3. 최종결과**
 
 ![success](/assets/images/../../../assets/images/2023-04-07-make-comment/utterances/7.png "success")
+<br />
 
 뭐가 변한거야? 싶기도 하겠지만 진짜진짜 변했다. 너비가 아주 마음을 편하게 해준다.ㅎ 사이다다.
 
