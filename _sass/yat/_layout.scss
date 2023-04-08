@@ -116,7 +116,7 @@ html {
 }
 
 .site-nav {
-  @include relative-font-size(1.125);
+  @include relative-font-size(1);
   line-height: $header-height;
   position: absolute;
   right: 0;
@@ -616,7 +616,7 @@ html {
 
     color: $banner-text-color;
     padding: 10px 5px;
-    text-shadow: 1px 1px 2px #33333355;
+    text-shadow: 1px 1px 2px #2e3840;
 
     & > *:first-child {
       margin: 0;
