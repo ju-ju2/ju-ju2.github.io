@@ -226,12 +226,12 @@ html {
   }
 
   .post-title {
-    @include relative-font-size(2.625);
+    @include relative-font-size(2.1);
     letter-spacing: -1px;
     line-height: 1;
 
     @include media-query($on-laptop) {
-      @include relative-font-size(2.25);
+      @include relative-font-size(2.1);
     }
   }
 
@@ -468,15 +468,17 @@ html {
 
   .post-related {
     & > *:first-child {
-      @include relative-font-size(1.425);
-      color: #333;
+      @include relative-font-size(1.5);
+      color: $brand-color;
+
+      // color: #333;
       margin-bottom: 14px;
     }
 
     ul {
       margin-left: 15px;
       .post-link {
-        @include relative-font-size(1.075);
+        @include relative-font-size(1);
       }
 
       a {
@@ -522,7 +524,7 @@ html {
 
   a {
     @include relative-font-size(1.125);
-    line-height: 15px;
+    line-height: 24px;
     color: #666;
     max-width: 50%;
   }
