@@ -4,12 +4,13 @@ title: 자바스크립트 배열 중복 제거
 subtitle: indexOf(), reduce() 함수 이해하기
 categories: javascript
 tags: [javascript, test]
+image: /assets/images/2023-04-07-make-comment/utterances/1.png
 ---
 
 javascript에서 배열의 중복되는 값을 제거하는 방식은 다양하다.  
 그 중 `filter(),indexOf()` 함수를 이용하는 방법과 `reduce(),includes()` 함수를 이용하는 방법을 다루려고 한다. 우선 각 함수들의 개념을 정리하고 혼합하여 쓰는 방식을 정리하려 한다.
 
-<h4 style="color: #ff5100;;">indexOf()</h4>
+<h4 id="indexOf">indexOf()</h4>
 
 ---
 
@@ -48,7 +49,7 @@ let result = fruits.lastIndexOf("mango");
 <br />
 <br />
 
-<h4 style="color: #ff5100;;">filter()</h4>
+<h4 id="filter">filter()</h4>
 
 ---
 
@@ -70,7 +71,7 @@ console.log(evenNumbers); // [2, 4]
 <br />
 <br />
 
-<h3 style="color: #ff5100;;">filter() 와 indexOf() 를 이용하여 배열의 중복 제거하기</h3>
+<h4 id="filter-indexOf" style="color: #ff5100;;">filter() 와 indexOf() 를 이용하여 배열의 중복 제거하기</h4>
 
 ---
 
@@ -100,7 +101,7 @@ console.log(myArr); // ['apple', 'banana', 'mango']
 <br />
 <br />
 
-<h4 style="color: #ff5100;;">reduce()</h4>
+<h4 id="reduce">reduce()</h4>
 
 ---
 
@@ -128,7 +129,7 @@ console.log(sum); // 15
 <br />
 <br />
 <br />
-<h4 style="color: #ff5100;;">includes()</h4>
+<h4 id="includes">includes()</h4>
 
 ---
 
@@ -144,7 +145,7 @@ console.log(fruits.includes("kiwi")); // false
 <br />
 <br />
 <br />
-<h3 style="color: #ff5100;;">reduce() 와 includes() 를 이용하여 배열의 중복 제거하기</h3>
+<h4 id="includes-reduce" style="color: #ff5100;;">reduce() 와 includes() 를 이용하여 배열의 중복 제거하기</h4>
 
 ---
 
