@@ -523,7 +523,7 @@ html {
   padding: 31px 0 0;
 
   a {
-    @include relative-font-size(1.125);
+    @include relative-font-size(1);
     line-height: 24px;
     color: #666;
     max-width: 50%;
