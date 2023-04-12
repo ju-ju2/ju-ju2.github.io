@@ -30,7 +30,7 @@ yat:
   date_format: "%Y-%m-%d"
 
 description: "개발 일짱이 되는 과정을 기록하는 공간"
-og:image: "/assets/images/banners/juju-og-image.png"
+image: "/assets/images/banners/juju-og-image.png"
 
 # If you want more debug log, you can set true
 # debug: false

@@ -4,7 +4,7 @@ title: 자바스크립트 배열 중복 제거
 subtitle: indexOf(), reduce() 함수 이해하기
 categories: javascript
 tags: [javascript, test]
-image: /assets/images/2023-04-07-make-comment/utterances/1.png
+image: /assets/images/2023-04-12/deduplication.png
 ---
 
 javascript에서 배열의 중복되는 값을 제거하는 방식은 다양하다.  
