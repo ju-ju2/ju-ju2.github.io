@@ -4,7 +4,7 @@ title: filter 함수를 통한 키워드 검색
 subtitle: 검색버튼, 엔터키로 필터링
 categories: project
 tags: [react, filter]
-image:
+image: /assets/images/2023-06-01-filter/filter.png
 ---
 
 프로젝트에서 키워드를 검색하면 필터링해주는 필터 컴포넌트 구현을 맡았다.
@@ -149,10 +149,7 @@ useEffect(() => {
     const filteredData = defaultData.filter(
       (data) =>
         data.title.toLowerCase().includes(savedKeyword.toLowerCase()) ||
-        data.content.toLowerCase().includes(savedKeyword.toLowerCase()) ||
-        data.tags?.some((tag) =>
-          tag.toLowerCase().includes(savedKeyword.toLowerCase())
-        )
+        data.content.toLowerCase().includes(savedKeyword.toLowerCase())
     );
     handleSearch(filteredData);
     setSavedKeyword(savedKeyword);
@@ -181,3 +178,67 @@ useEffect(() => {
 이렇게 필터 컴포넌트를 구현하며 겪었던 에러와 풀어나갔던 방법을 정리해보았다. 물론 데이터가 많아질수록 대량의 데이터를 하나하나 필터링하는 방법이 썩 좋지는 않겠지만 데이터의 양이 적을 때는 한번 써볼만 한 것 같다.
 
 자 그리고 더 나아가서 굳이 검색버튼, 엔터를 누르지 않아도 키워드를 입력하면 실시간으로 필터링 하는 방식이 있을 것이다. 해당 방식에 대해서도 시행착오를 많이 겪었는데 다음 포스팅에서 정리해보도록 하겠다.😎
+<br /><br /><br />
+<br /><br /><br />
+++ 전체 코드
+
+```typescript
+export default function Filter({
+  defaultData,
+  handleSearch,
+  ...rest
+}: FilterProps) {
+  const [keyword, setKeyword] = useState("");
+
+  const onClickSearch = () => {
+    const filteredData = defaultData.filter(
+      (data) =>
+        data.title.toLowerCase().includes(keyword.toLowerCase()) ||
+        data.subTitle.toLowerCase().includes(keyword.toLowerCase())
+    );
+    sessionStorage.setItem("searchKeyword", keyword);
+    handleSearch(filteredData);
+  };
+
+  const [savedKeyword, setSavedKeyword] = useState("");
+
+  useEffect(() => {
+    const savedKeyword = window.sessionStorage.getItem("searchKeyword");
+    if (savedKeyword) {
+      const filteredData = defaultData.filter(
+        (data) =>
+          data.title.toLowerCase().includes(savedKeyword.toLowerCase()) ||
+          data.subTitle.toLowerCase().includes(savedKeyword.toLowerCase())
+      );
+      handleSearch(filteredData);
+      setSavedKeyword(savedKeyword);
+    }
+  }, []);
+
+  const onChangeKeyword = (e: ChangeEvent<HTMLInputElement>) => {
+    setKeyword(e.currentTarget.value);
+    if (!e.currentTarget.value) {
+      handleSearch(defaultData);
+    }
+  };
+  return (
+    <SearchDiv>
+      <StyledInput
+        type="text"
+        placeholder="검색어를 입력하세요."
+        defaultValue={savedKeyword}
+        onChange={onChangeKeyword}
+        onKeyDown={(e) => {
+          if (e.key === "Enter") {
+            onClickSearch();
+          }
+        }}
+        {...rest}
+      />
+      <SearchBtn onClick={onClickSearch}>
+        <SearchIcon />
+      </SearchBtn>
+    </SearchDiv>
+  );
+}
+```
