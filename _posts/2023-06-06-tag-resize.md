@@ -86,7 +86,7 @@ image: /assets/images/2023-06-06-resize/resize.png
 
 <br />
 
-#### 수정 전 코드
+#### 수정 전 코드\_1
 
 ```typescript
 export default function TagBox({
@@ -179,6 +179,8 @@ export default function TagBox({
 <br />
 <br />
 
+#### 수정 전 코드\_2
+
 ```typescript
 useEffect(() => {
   window.addEventListener("resize", calculateTagWidths);
@@ -191,11 +193,56 @@ useEffect(() => {
 <br />
 <br />
 이렇게 바꿔주면 위에서 보았던 것과 같은 결과를 얻을 수 있다.
+<br />.
+<br />.
+<br />.
+
+(허헛,,뿌듯함도 잠시,,)
+그런데..끝나지 않는 문제가 또 있다. 사실 resize 이벤트는 브라우저 창의 크기가 변경될 때 많은 이벤트를 발생시키므로 너무 자주 발생할 수 있다. 수없는 리랜더링으로 성능 문제가 발생할 수 있지않을까 싶다.
+실제로 `calculateTagWidths`함수에 로그를 찍어보니
+<br />
+<br />
+
+![에러](https://github.com/Side-Effect-Team/side-effect-frontend/assets/71650663/f0b4f031-6ff4-4891-adbf-b80ab28270a6)
+<br />
+<br />
+으악 이게 뭐람🤢 엄청난 로그 생성 중  
+물론 해당 뷰가 모바일 뷰에서만 전용이고, 모바일에서는 사용자가 화면 사이즈를 조정할 일이 없긴 하다만,,웹 뷰에서 조정안하는 법도 없고,,이 문제는 수정해야만 한다🥲  
+<br />
+보통은 이러한 이슈를 다루기 위해 디바운스나 쓰로틀을 이용한다고 하는데 나는 이전 포스팅에서 사용했던 것 처럼 라이브러리를 쓰지않고 타이머 함수로 이 문제를 해결해보려 한다. 아래는 변경된 코드이다.
+<br /><br />
+
+#### 수정 후 코드
+
+```TYPESCRIPT
+let resizeTimer: NodeJS.Timeout;
+  const handleResize = () => {
+    clearTimeout(resizeTimer);
+    resizeTimer = setTimeout(() => {
+      calculateTagWidths();
+    }, 300);
+  };
+
+  useEffect(() => {
+    calculateTagWidths(); // 첫 렌더링 시에도 숨겨진 태그가 보이도록
+    window.addEventListener("resize", handleResize);
+    return () => {
+      window.removeEventListener("resize", handleResize);
+    };
+  }, []);
+```
+
+<br />
+<br />
+코드를 보면 리사이징 이벤트를 타이머함수로 핸들링하고 있다.
 
 <br />
 
-<img width="450" alt="태그 숨김 결과" src="https://github.com/Side-Effect-Team/side-effect-frontend/assets/71650663/a24ea64d-898f-4a28-b507-ec36a94f157b">
+![수정](https://github.com/Side-Effect-Team/side-effect-frontend/assets/71650663/9e88d5c1-5704-452b-8675-53049d9324c4)
 
 <br />
-사실 resize 이벤트는 브라우저 창의 크기가 변경될 때 많은 이벤트를 발생시키므로 너무 자주 발생할 수 있을 것 같다. 이로 인해 성능 문제가 발생할 수 있지않을까 싶다만, 해당 로직은 모바일에서만 실행되는데 사실 모바일에서 화면을 실시간으로 줄이는 경우는 없지 않은가! 
-그런데 또 한편으로는 웹뷰에서도 화면을 줄이면 모바일 뷰가 보이긴 하니 이 문제에 대해 더 생각해봐야겠다. resize 이벤트 핸들러 내에서 타이머 함수를 적용해 문제를 해결할 수 있을 것 같은데,,, 오늘은 이만 여기서 마치고 해결한다면 다시 돌아오겠다😎
+결과는 아주 굿! 물론 이전 처럼 태그가 숨겨지는 즉시 카운드가 실행되고 있진 않지만 무분별한 함수가 실행되어 성능문제를 일으키는 것 보다 위의 방식으로 함수 호출을 제어하는 편이 더 좋을 것 같다. 
+<br /><br /><br />
+
+사실 이 태그 숨겨지고 카운트 생성하는 것부터 난관이였고 개발하는데 시간이 꽤 소요됐는데, 이슈에 이슈를 몰고다녀 꽤나 머리 아팠다. 하지만 결과물을 보니 매우 뿌듯하다ㅠㅠ 그리고 한번 정리했던 개념들이 해결방안으로 문득 생각나는 것도 신기하다. 앞으로도 개념들을 잘 정리해서 머릿속에 해결책 리스트들을 추가해야겠다.  
+오늘의 포스팅 이만 끝~😎
