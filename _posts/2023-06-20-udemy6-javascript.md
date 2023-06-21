@@ -1,6 +1,6 @@
 ---
 layout: post
-title: 유데미x스나이퍼팩토리 10주 완성 프로젝트 캠프 21일차 - javascript
+title: 유데미x스나이퍼팩토리 10주 완성 프로젝트 캠프 15일차 - javascript
 subtitle: javascript로 랜덤 배경이미지, 시계 만들기
 categories: javascript
 tags: [udemy, javascript]
