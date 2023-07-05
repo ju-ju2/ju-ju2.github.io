@@ -60,8 +60,8 @@ header_pages:
 #       min_height: "38vh"
 
 # Pagination setting
-paginate: 5
-
+paginate: 10
+paginate_path: "/"
 # Disqus comments
 # comments:
 #   provider: "disqus"
