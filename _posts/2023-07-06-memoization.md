@@ -1,7 +1,7 @@
 ---
 layout: post
 title: 리액트 렌더링 최적화 - 메모이제이션
-subtitle:
+subtitle: 무턱대고 쓰면 아니아니 아니되오
 categories: react
 tags: [react, memoization]
 image: /assets/images/2023-07-04-immutable/memoization.png
