@@ -7,8 +7,8 @@
   <meta name="google-translate-customization" content="108d9124921d80c3-80e20d618ff053c8-g4f02ec6f3dba68b7-c">
   <meta property="og:title" content="{% if page.title %}{{ page.title | escape }}{% else %}{{ site.title | escape }}{% endif %}">
   <meta property="og:description" content="{% if page.excerpt %}{{ page.excerpt | strip_html | strip_newlines | truncate: 160 }}{% else %}{{ site.description }}{% endif %}">
-  <!-- <meta property="og:image" content="/assets/images/banners/juju-og-image.png"> -->
-  <meta property="og:image" content="{{ site.url }}{{ page.image }}">
+  <!-- <meta property="og:image" content="{{ site.url }}{{ page.image }}"> -->
+  <meta property="og:image" content="{{ site.url }}{% if page.image %}{{ page.image }}{% else %}/assets/images/banners/juju-og-image.png{% endif %}">
   {%- seo -%}
   <!-- <link rel="icon" href="{{ site.favicon }}"> -->
   <link rel="icon" type="image/png" href="/assets/images/favicons/favicon-juju.ico">
