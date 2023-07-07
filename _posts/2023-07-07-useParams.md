@@ -3,7 +3,7 @@ layout: post
 title: 리액트 useParams와 쿼리스트링
 subtitle: url에서 데이터 가져오기 대작전
 categories: react
-tags: [react, memoization]
+tags: [react, hook]
 image: /assets/images/2023-07-07-useParams/useParams.png
 ---
 
