@@ -1,16 +1,11 @@
 ---
 layout: framework
 sidebar: category-list
+image: /assets/images/banners/juju-og-image.png
 ---
 
-{%- if site.posts.size > 0 -%}
-
-  {%- include functions.html func='log' level='debug' msg='Get value' -%}
-  {%- include functions.html func='get_categories' -%}
-  {% assign categories = return %}
-
-  {% assign keys = categories %}
-  {% assign field = 'categories' %}
-  {%- include views/segments.html -%}
-
-{%- endif -%}
+{%- if site.posts.size > 0 -%} {%- include functions.html func='log'
+level='debug' msg='Get value' -%} {%- include functions.html
+func='get_categories' -%} {% assign categories = return %} {% assign keys =
+categories %} {% assign field = 'categories' %} {%- include views/segments.html
+-%} {%- endif -%}

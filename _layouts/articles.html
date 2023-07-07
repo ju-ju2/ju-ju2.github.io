@@ -1,14 +1,10 @@
 ---
 layout: framework
 sidebar: category-list
+image: /assets/images/banners/juju-og-image.png
 ---
 
 <div class="articles">
-  {% if page.banner == nil %}
-    {% assign banner = page.title %}
-  {% endif %}
-
-  {{ content }}
-
-  {% include views/pagination.html %}
+  {% if page.banner == nil %} {% assign banner = page.title %} {% endif %} {{
+  content }} {% include views/pagination.html %}
 </div>
