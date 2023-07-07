@@ -88,3 +88,6 @@ plugins:
   - jekyll-sitemap
   - jekyll-paginate
   - jekyll-spaceship
+
+gems:
+  - jekyll-sitemap
