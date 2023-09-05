@@ -132,7 +132,7 @@ return(
 
 ---
 
-<img width="600" alt="금지어 판별" src="https://github.com/ju-ju2/antd/assets/71650663/334e45f4-241a-44dc-92f1-3e4e20c373a8">
+<img width="600" alt="금지어 판별" src="https://github.com/ju-ju2/ju-ju2.github.io/assets/71650663/8b093558-5f67-4700-90da-07d8d529a685">
 
 <br/>
 
