@@ -1,7 +1,7 @@
 ---
 layout: post
-title: 금지어 판별하여 지워주기
-subtitle:
+title: javascript_금지어 판별하여 지워주기
+subtitle: 냅다 지워버리기
 categories: react
 tags: [javascript, form]
 image: /assets/images/2023-09-05-bannedWord/bannedWord.png
