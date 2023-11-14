@@ -2,7 +2,7 @@
 layout: post
 title: 타입스크립트 - 제네릭타입
 subtitle: 이게 무슨 언어람
-categories: 타입스크립트
+categories: typescript
 tags: [typescript, generics]
 image: /assets/images/20231114_generics.png
 ---

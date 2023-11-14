@@ -2,8 +2,8 @@
 layout: post
 title: 입사 3개월차의 회고록
 subtitle: 시간아 멈춰라
-categories: 회고
-tags: [회고]
+categories: work
+tags: [work]
 image: /assets/images/20231112_workHistory.png
 ---
 
