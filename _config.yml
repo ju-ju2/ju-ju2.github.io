@@ -61,7 +61,8 @@ header_pages:
 
 # Pagination setting
 paginate: 10
-paginate_path: "/"
+# paginate_path: "/"
+paginate_path: "/page/:num/"
 # Disqus comments
 # comments:
 #   provider: "disqus"
