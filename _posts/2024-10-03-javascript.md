@@ -17,7 +17,7 @@ image: /assets/images/20241003_javascript.png
 ---
 
 <br/>
-<em style='font-size: 14px; color: #ff5100; font-weight: bold;'>1. 스택(Stack)</em>
+<em style='font-size: 18px; color: #ff5100; font-weight: bold;'>1. 스택(Stack)</em>
 
 - 코드 실행이 이루어지는 공간.
 
@@ -27,7 +27,7 @@ image: /assets/images/20241003_javascript.png
   -> stack을 바쁘게 하지 말자.
 
 <br/>
-<em style='font-size: 14px; color: #ff5100; font-weight: bold;'>2. 대기실(Waiting Room)</em>
+<em style='font-size: 18px; color: #ff5100; font-weight: bold;'>2. 대기실(Waiting Room)</em>
 
 - 시간이 걸리는 작업들은 스택에서 바로 처리되지 않고 대기실로 보내진다.
 
@@ -38,7 +38,7 @@ image: /assets/images/20241003_javascript.png
     \*ajax: 자바스크립트를 사용하여 서버와 비동기적으로 데이터를 주고받는 기술
 
 <br/>
-<em style='font-size: 14px; color: #ff5100; font-weight: bold;'>3. 큐(Queue)</em>
+<em style='font-size: 18px; color: #ff5100; font-weight: bold;'>3. 큐(Queue)</em>
 
 - 대기 중이던 작업이 완료되면 큐로 이동한다.
 
@@ -52,11 +52,11 @@ image: /assets/images/20241003_javascript.png
 ---
 
 <br/>
-<em style='font-size: 14px; color: #ff5100; font-weight: bold;'>동기적 처리(Synchronous Processing)</em>
+<em style='font-size: 18px; color: #ff5100; font-weight: bold;'>동기적 처리(Synchronous Processing)</em>
 
 - 자바스크립트는 기본적으로 stack이 하나이기 때문에 동기적으로 코드를 처리한다. 모든 작업이 스택에서 순차적으로 한줄씩 실행되기 때문에, 하나의 작업이 끝나지 않으면 그 다음 작업은 실행될 수 없다.
 
 <br/>
-<em style='font-size: 14px; color: #ff5100; font-weight: bold;'>비동기적 처리(Asynchronous Processing)</em>
+<em style='font-size: 18px; color: #ff5100; font-weight: bold;'>비동기적 처리(Asynchronous Processing)</em>
 
 - 비동기 처리는 대기 시간이 필요한 작업을 처리하기 위해 사용된다. setTimeout, AJAX, 이벤트리스너 와 같은 함수들이 비동기적으로 동작하여 스택을 차지하지 않고 별도의 대기실에서 대기하다가, 조건이 충족되면 큐로 이동해 실행된다. 비동기를 활용하면 장시간 대기하는 작업을 스택에서 처리하지 않으므로, 다른 작업을 중단시키지 않고 동시에 여러 작업을 처리하는 것처럼 보이게 한다.

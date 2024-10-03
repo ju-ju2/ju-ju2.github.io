@@ -56,10 +56,10 @@ image: /assets/images/20240826_eventloop.png
 ---
 
 <br/>
-<em style='font-size: 14px; color: #ff5100; font-weight: bold;'>힙(Heap)</em> : 메모리 할당이 이루어지는 공간으로, 객체와 변수가 저장된다.
+<em style='font-size: 17px; color: #ff5100; font-weight: bold;'>힙(Heap)</em> : 메모리 할당이 이루어지는 공간으로, 객체와 변수가 저장된다.
 
 <br/>
-<em style='font-size: 14px; color: #ff5100; font-weight: bold;'>스택(Stack)</em> : 함수가 호출되는 순서대로 쌓이며, 후입선출(LIFO) 방식으로 작동한다.
+<em style='font-size: 17px; color: #ff5100; font-weight: bold;'>스택(Stack)</em> : 함수가 호출되는 순서대로 쌓이며, 후입선출(LIFO) 방식으로 작동한다.
 
 - 스택 구조 예시
 
