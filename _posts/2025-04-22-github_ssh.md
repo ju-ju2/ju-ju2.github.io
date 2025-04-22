@@ -1,6 +1,6 @@
 ---
 layout: post
-title: title: Github shh 사용하기
+title: Github shh 사용하기
 subtitle: 어디서나 보증된 나!
 categories: Github
 tags: [Github]

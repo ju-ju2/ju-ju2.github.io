@@ -2,8 +2,8 @@
 layout: post
 title: localhost에서 https 사용하기
 subtitle: feat.mkcert
-categories: Vite
-tags: [Vite]
+categories: HTTPS
+tags: [HTTPS]
 image: /assets/images/20250417_mkcert.png
 ---
 
@@ -53,7 +53,7 @@ image: /assets/images/20250417_mkcert.png
 
    <br/>
 
-5. 개발 환경 실행
+5. 개발 환경 실행  
    "scripts": { "start": "cross-env HTTPS=true SSL_CRT_FILE=./localhost.pem SSL_KEY_FILE=./localhost-key.pem react-scripts start", }
 
    <br/>
