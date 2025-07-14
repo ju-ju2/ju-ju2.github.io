@@ -88,7 +88,7 @@ window.addEventListener는 `전역 객체`에 이벤트 리스너를 등록하�
 
 Figma 플러그인 라이브러리인 @create-figma-plugin/utilities는 위의 메시지 통신 과정을 더 깔끔하고 간결하게 도와준다.
 
-- emit – 메시지 발신
+- `emit` – 메시지 발신
 
 ```
 import { emit } from "@create-figma-plugin/utilities";
@@ -101,7 +101,8 @@ emit("MY_EVENT", { foo: "bar" });
 
 <br/>
 <br/>
-- on – 메시지 수신
+
+- `on` – 메시지 수신
 
 ```
 import { on } from "@create-figma-plugin/utilities";
